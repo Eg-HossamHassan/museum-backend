@@ -13,4 +13,5 @@ const artifactSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("Artifact", artifactSchema);
+// الحل: استخدم الموديل الموجود إذا موجود بالفعل
+module.exports = mongoose.models.Artifact || mongoose.model("Artifact", artifactSchema);
