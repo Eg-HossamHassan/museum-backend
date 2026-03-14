@@ -13,8 +13,8 @@ app.use(express.json());
 app.use("/api/auth",authRoutes);
 app.use("/api/artifacts",artifactRoutes);
 mongoose.connect(process.env.MONGO_URI)
-.then(()=> console.log("MongoDB Connected"))
-.catch(err=> console.log(err));
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log("MongoDB connection failed:", err.message));
 
 app.get("/", (req,res)=>{
  res.send("Museum API Running");
