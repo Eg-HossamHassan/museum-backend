@@ -6,7 +6,8 @@ const authRoutes = require("./routes/authRoutes");
 const artifactRoutes = require("./routes/artifactRoutes");
 const app = express();
 const connectDB = require("./config/db");
-
+const swaggerUi = require("swagger-ui-express");
+const swaggerJsdoc = require("swagger-jsdoc");
 connectDB();
 app.use(cors());
 app.use(express.json());
