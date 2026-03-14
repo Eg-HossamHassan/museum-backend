@@ -5,7 +5,9 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const artifactRoutes = require("./routes/artifactRoutes");
 const app = express();
+const connectDB = require("./config./db");
 
+connectDB();
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth",authRoutes);
